@@ -50,8 +50,18 @@ public class Steps extends BaseTest {
 	@Then("User verifies the message {string} {string}")
 	public void user_verifies_the_message(String LogicalName, String expectedText) {
 		page.validateText(LogicalName, expectedText);
-
 	}
+
+	@Then("User Checked the checkbox {string}")
+	public void user_checked_the_checkbox(String logicalName) {
+		page.checkTheCheckBox(logicalName);
+	}
+
+	@Then("User waits to load page")
+	public void user_waits_to_load_page() throws InterruptedException {
+		waitForPageToLoad();
+	}
+
 
 	@After
 	public void tearDown(Scenario scenario) {

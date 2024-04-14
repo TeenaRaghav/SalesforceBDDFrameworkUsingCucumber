@@ -42,5 +42,7 @@ public class BaseTest {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-
+	public void waitForPageToLoad() throws InterruptedException {
+		Thread.sleep(4000);
+	}
 }

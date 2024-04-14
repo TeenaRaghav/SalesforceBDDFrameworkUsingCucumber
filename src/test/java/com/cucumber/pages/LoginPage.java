@@ -11,10 +11,11 @@ public class LoginPage extends BasePage {
 	static WebDriver driver;
 	public LoginPage() {
 		super(driver=BaseTest.getDriver("Chrome"));
-		addObject("Username",By.id("username"));
-		addObject("Password",By.id("password"));
-		addObject("Login",By.id("Login"));
-		addObject("Error",By.xpath("//div[@id='error']"));
-		
+		addObject("Username",By.xpath("//input[@id='username']"));
+		addObject("Password",By.xpath("//input[@id='password']"));
+		addObject("Login",By.xpath("//input[@id='Login']"));
+		addObject("RememberMe",By.xpath("//input[@id='rememberUn']"));
+		addObject("Forgot Your Password?",By.xpath("//a[@id='forgot_password_link']"));
+
 	}
 }

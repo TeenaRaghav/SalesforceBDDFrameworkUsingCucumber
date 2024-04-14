@@ -52,7 +52,12 @@ public class BasePage {
 		waitforElement(logicalName);
 		String ActualText = element.getText();
 		Assert.assertEquals(ActualText, expectedText);
-		
 	}
-
+	public void checkTheCheckBox(String logicalName) {
+		WebElement element = getElement(logicalName);
+		if(!element.isSelected()) {
+			element.click();
+		}
+	}
+	
 }
