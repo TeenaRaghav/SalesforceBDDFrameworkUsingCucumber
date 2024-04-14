@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 				 glue = {"com.cucumber.steps"},
 				 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
 						 "json:target/cucumber-reports/cucumber.json"},
-				 tags="@test"
+				 tags="@login"
 		
 		)
 

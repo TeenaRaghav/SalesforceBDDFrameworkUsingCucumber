@@ -59,5 +59,8 @@ public class BasePage {
 			element.click();
 		}
 	}
-	
+	public void clickOnTheLink(String logicalName) {
+		WebElement element = getElement(logicalName);
+		element.click();
+	}
 }

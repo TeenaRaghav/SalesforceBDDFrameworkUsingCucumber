@@ -61,6 +61,11 @@ public class Steps extends BaseTest {
 	public void user_waits_to_load_page() throws InterruptedException {
 		waitForPageToLoad();
 	}
+	@Then("User Click On the Link {string}")
+	public void user_click_on_the_link(String logicalName) {
+		page.clickOnTheLink(logicalName);
+	    
+	}
 
 
 	@After
