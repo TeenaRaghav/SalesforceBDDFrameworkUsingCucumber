@@ -12,12 +12,12 @@ import com.cucumber.utilities.PropertiesFile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseTest {
-	private static WebDriver driver;
+	protected static WebDriver driver;
 
 	static PropertiesFile prop = new PropertiesFile();
 
 	public static void launchapplication(String browserName) throws IOException{
-		setDriver(getDriver(browserName));
+		driver = getDriver(browserName);
 		String appUrl = prop.getProperties("url");
 		getDriver().get(appUrl);
 	}
@@ -43,7 +43,4 @@ public class BaseTest {
 		return driver;
 	}
 
-	public static void setDriver(WebDriver driver) {
-		BaseTest.driver = driver;
-	}
 }

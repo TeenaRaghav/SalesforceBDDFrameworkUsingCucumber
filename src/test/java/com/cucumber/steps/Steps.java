@@ -2,21 +2,25 @@ package com.cucumber.steps;
 
 import java.io.IOException;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.cucumber.base.BasePage;
 import com.cucumber.base.BaseTest;
+import com.cucumber.pagefactory.PageFactory;
 import com.cucumber.pages.LoginPage;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
 public class Steps extends BaseTest {
 	BasePage page;
-	WebDriver driver;
+	PageFactory pageFactory = new PageFactory();
 
 	@Given("User launch the application in {string}")
 	public void user_launch_the_application_in(String browserName) throws IOException {
@@ -24,7 +28,13 @@ public class Steps extends BaseTest {
 	}
 
 	@Given("User is on {string}")
-	public void user_is_on(String string) {
+	public void user_is_on(String pageName) {
+		page = pageFactory.initialize(pageName);
+	}
+
+	@Then("user waits for Element {string}")
+	public void user_waits_for_element(String logicalName) {
+		page.waitforElement(logicalName);
 	}
 
 	@Then("User Enter into text box {string} {string}")
@@ -37,8 +47,17 @@ public class Steps extends BaseTest {
 		page.clickOnButton(logicalName);
 	}
 
+	@Then("User verifies the message {string} {string}")
+	public void user_verifies_the_message(String LogicalName, String expectedText) {
+		page.validateText(LogicalName, expectedText);
+
+	}
+
 	@After
-	public void tearDown() {
+	public void tearDown(Scenario scenario) {
+		byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		scenario.attach(screenshot, "image/png", scenario.getName());
 		driver.quit();
+		driver = null;
 	}
 }

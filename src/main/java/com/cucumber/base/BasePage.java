@@ -6,16 +6,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class BasePage {
 
 	protected WebDriver driver;
 	HashMap<String, By> ObjectRepo = new HashMap<String, By>();
 
-//	public BasePage(WebDriver driver) {
-//		this.driver = driver;
-//		PageFactory.initElements(driver, this);
-//	}
+	public BasePage(WebDriver driver) {
+		this.driver = driver;
+	}
 
 	public void enterIntoTextBox(String logicalName, String value) {
 		WebElement element = getElement(logicalName);
@@ -36,4 +38,21 @@ public class BasePage {
 		WebElement element = driver.findElement(by);
 		return element;
 	}
+	public void waitforElement(String logicalName) {
+		WebElement element = getElement(logicalName);
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(element));		
+	}
+	public void clickonRadioButton(String logicalName) {
+		WebElement element = getElement(logicalName);
+		element.click();	
+	}
+	public void validateText(String logicalName, String expectedText) {
+		WebElement element = getElement(logicalName);
+		waitforElement(logicalName);
+		String ActualText = element.getText();
+		Assert.assertEquals(ActualText, expectedText);
+		
+	}
+
 }
