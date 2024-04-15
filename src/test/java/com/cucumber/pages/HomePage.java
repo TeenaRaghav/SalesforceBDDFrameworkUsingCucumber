@@ -10,7 +10,7 @@ public class HomePage extends BasePage{
 	static WebDriver driver;
 	public HomePage() {
 		super(driver = BaseTest.getDriver("Chrome"));
-		
+		addObject("Usermenu",By.xpath("//div[@id='userNavButton']"));
 		addObject("HomeTab",By.xpath("(//a[contains(text(),'Home')])[1]"));
 		addObject("DeveloperConsole",By.xpath("//a[contains(text(),'Developer Console')]"));
 		addObject("Logout",By.xpath("//a[contains(text(),'Logout')]"));

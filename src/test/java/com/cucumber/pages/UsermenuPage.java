@@ -27,9 +27,8 @@ public class UsermenuPage extends BasePage {
 		addObject("DisplayAndLayout",By.id("DisplayAndLayout_font"));
 		addObject("CustomizeMyTab",By.xpath("//span[contains(text(),'Customize My Tabs')]"));
 		addObject("CustomApp",By.xpath("//select[@id=\"p4\"]"));
-		addObject("AvailableTabs",By.xpath("//select[@id=\"duel_select_0\"]"));
-		addObject("AddInCustomize",By.className("rightArrowIcon"));
-		addObject("Email",By.id("EmailSetup_font"));
+		addObject("ReportTab",By.xpath("//select[@id=\"duel_select_0\"]"));
+		addObject("AddTab",By.className("rightArrowIcon"));
 		addObject("Save",By.xpath("//input[@class=\"btn primary\"]"));
 		addObject("EmailTab",By.id("EmailSetup_font"));
 		addObject("MyEmailSetting",By.id("EmailSettings_font"));

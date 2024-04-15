@@ -61,13 +61,43 @@ Then Click on the button "SavePhoto"
 Then User waits to load page
 
 
-@test
+@mysettings
 Scenario: Edit My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
 Then Click on the button "PersonalInfo"
 Then Click on the button "LoginHistory"
 Then User Click On the Link "LoginHistoryLink"
+Then Click on the button "DisplayAndLayout"
+Then Click on the button "CustomizeMyTab"
+When User selects by visible Text "CustomApp" "Salesforce Chatter"
+Then User selects by value "ReportTab" "report"
+Then Click on the button "AddTab"
+Then Click on the button "Save"
+
+
+
+Scenario: Edit Email in My settings
+Then Click on the button "Usermenu"
+Then Click on the button "MySettings"
+Then Click on the button "EmailTab"
+Then Click on the button "MyEmailSetting"
+Then User Enter into text box "EmailName" "TeenaRTomar"
+Then User Enter into text box "EmailAddress" "teena@singh.com"
+Then User Click on the Radio button "YesRadioButton"
+Then Click on the button "Save"
+Then User Accept the alert
+
+@test
+Scenario: Edit Email in My settings
+Then Click on the button "Usermenu"
+Then Click on the button "MySettings"
+Then Click on the button "CalendarsAndReminders"
+Then Click on the button "ActivityReminders"
+Then Click on the button "TestReminder"
+
+
+
 
 
 

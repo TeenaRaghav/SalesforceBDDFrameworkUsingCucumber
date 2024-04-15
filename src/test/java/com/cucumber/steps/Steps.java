@@ -11,6 +11,7 @@ import com.cucumber.base.BasePage;
 import com.cucumber.base.BaseTest;
 import com.cucumber.pagefactory.PageFactory;
 import com.cucumber.pages.LoginPage;
+import com.cucumber.utilities.PropertiesFile;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -21,6 +22,7 @@ import io.cucumber.java.en.When;
 
 public class Steps extends BaseTest {
 	BasePage page;
+	PropertiesFile prop = new PropertiesFile();
 	PageFactory pageFactory = new PageFactory();
 
 	@Given("User launch the application in {string}")
@@ -39,7 +41,7 @@ public class Steps extends BaseTest {
 	}
 
 	@Then("User Enter into text box {string} {string}")
-	public void user_enter_into_text_box(String logicalName, String value) {
+	public void user_enter_into_text_box(String logicalName, String value) throws IOException {
 		page.enterIntoTextBox(logicalName, value);
 	}
 
@@ -60,44 +62,66 @@ public class Steps extends BaseTest {
 
 	@Then("User waits to load page")
 	public void user_waits_to_load_page() throws InterruptedException {
-		waitForPageToLoad();
+		page.waitForPageToLoad();
 	}
+
 	@Then("User Click On the Link {string}")
 	public void user_click_on_the_link(String logicalName) {
 		page.clickOnTheLink(logicalName);
-	    
+
 	}
+
 	@When("User switches to the frame {string}")
 	public void user_switches_to_the_frame(String logicalName) {
-	   page.switchToFrame(logicalName);
+		page.switchToFrame(logicalName);
 	}
+
 	@Then("User Switches back to default frame")
 	public void user_switches_back_to_default_frame() {
-	    page.switchToDefaultFrame();
+		page.switchToDefaultFrame();
 	}
+
 	@Then("Post Should be Successfully posted {string} {string}")
 	public void post_should_be_successfully_posted(String logicalName, String value) {
-	    page.validateText(logicalName, value);
+		page.validateText(logicalName, value);
 	}
 
 	@Then("User selects file to upload {string} {string}")
-	public void user_selects_file_to_upload(String logicalName, String path ) {
-	    page.uploadFile(logicalName, path);
+	public void user_selects_file_to_upload(String logicalName, String path) {
+		page.uploadFile(logicalName, path);
 	}
+
 	@Then("File should be Successfully uploaded {string} {string}")
 	public void file_should_be_successfully_uploaded(String logicalName, String value) {
-	   page.validateText(logicalName, value);
+		page.validateText(logicalName, value);
 	}
+
 	@When("User hover over the element {string}")
 	public void user_hover_over_the_element(String logicalName) {
-	    page.hoverToElement(logicalName);
+		page.hoverToElement(logicalName);
 	}
+
 	@Then("User selects photo to upload {string} {string}")
 	public void user_selects_photo_to_upload(String logicalName, String path) {
-	 page.uploadFile(logicalName, path);
+		page.uploadFile(logicalName, path);
 	}
 
-
+	@When("User selects by visible Text {string} {string}")
+	public void user_selects_by_visible_text(String logicalName, String value) {
+	    page.selectText(logicalName, value);
+	}
+	@Then("User selects by value {string} {string}")
+	public void user_selects_by_value(String logicalName, String value) {
+		page.selectValue(logicalName, value);
+	}
+	@Then("User Click on the Radio button {string}")
+	public void user_click_on_the_radio_button(String logicalName) {
+	    page.clickonRadioButton(logicalName);
+	}
+	@Then("User Accept the alert")
+	public void user_accept_the_alert() {
+	    page.acceptAlert();
+	}
 
 
 	@After

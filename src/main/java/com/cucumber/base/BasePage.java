@@ -1,26 +1,36 @@
 package com.cucumber.base;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import com.cucumber.utilities.PropertiesFile;
 
 public class BasePage {
 
 	protected WebDriver driver;
+	JavascriptExecutor js;
+	Select select;
+	PropertiesFile prop = new PropertiesFile();
 	HashMap<String, By> ObjectRepo = new HashMap<String, By>();
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
 	}
 
-	public void enterIntoTextBox(String logicalName, String value) {
+	public void enterIntoTextBox(String logicalName,String value) throws IOException {
 		WebElement element = getElement(logicalName);
 		element.clear();
 		element.sendKeys(value);
@@ -47,7 +57,9 @@ public class BasePage {
 	}
 	public void clickonRadioButton(String logicalName) {
 		WebElement element = getElement(logicalName);
+		if(!element.isSelected()) {
 		element.click();	
+		}
 	}
 	public void validateText(String logicalName, String expectedText) {
 		WebElement element = getElement(logicalName);
@@ -65,12 +77,23 @@ public class BasePage {
 		WebElement element = getElement(logicalName);
 		element.click();
 	}
-	
+	public void acceptAlert() {
+		driver.switchTo().alert().accept();
+	}
+	public void dismissAlert() {
+		driver.switchTo().alert().dismiss();
+	}
+	public void waitForPageToLoad() throws InterruptedException {
+		Thread.sleep(4000);
+	}
+	public void scrolldown() {
+		js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0, 500)");
+	}
 	public void switchToFrame(String logicalName) {
 		WebElement element = getElement(logicalName);
 		driver.switchTo().frame(element);
 	}
-
 	public void switchToDefaultFrame() {
 		driver.switchTo().defaultContent();
 		
@@ -84,4 +107,42 @@ public class BasePage {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).build().perform();
 	}
-}
+	public void selectText(String logicalName, String value) {
+	WebElement element = getElement(logicalName);
+		select = new Select(element);
+		select.selectByVisibleText(value);
+	}
+	public void selectValue(String logicalName, String value) {
+		WebElement element = getElement(logicalName);
+		select = new Select(element);
+		select.selectByValue(value);
+	}
+	public void selectIndex(String logicalName, int index) {
+		WebElement element = getElement(logicalName);
+		select = new Select(element);
+		select.selectByIndex(index);
+	}
+	public void switchToChildWindow() {
+		String parentWindow = driver.getWindowHandle();
+		Set<String> Handles = driver.getWindowHandles();
+		for (String handle : Handles) {
+			if (!handle.equals(parentWindow)) {
+				driver.switchTo().window(handle);
+			}
+		}
+	}
+	public String getParentWindow() {
+		String parentWindow = driver.getWindowHandle();
+		return parentWindow;
+	}
+
+	public void switchToParentWindow(String parentWindow) {
+		Set<String> handles = driver.getWindowHandles();
+		for (String handle : handles) {
+			if (!handle.equals(parentWindow)) {
+				driver.switchTo().window(handle);
+			}
+		}
+		driver.switchTo().window(parentWindow);
+	}
+	}

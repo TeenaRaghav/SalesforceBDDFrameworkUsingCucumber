@@ -20,7 +20,7 @@ Then Click on the button "Login"
 Then User is on "HomePage"
 
 
-@login
+@login @test
 Scenario: Enter valid username and valid password and click on Remember me checkbox
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"

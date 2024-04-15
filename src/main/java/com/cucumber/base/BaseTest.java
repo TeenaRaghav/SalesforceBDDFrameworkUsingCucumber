@@ -19,7 +19,7 @@ public class BaseTest {
 	public static void launchapplication(String browserName) throws IOException{
 		driver = getDriver(browserName);
 		String appUrl = prop.getProperties("url");
-		getDriver().get(appUrl);
+		driver.get(appUrl);
 	}
 
 	public static WebDriver getDriver(String browserName) {
@@ -42,7 +42,5 @@ public class BaseTest {
 	public static WebDriver getDriver() {
 		return driver;
 	}
-	public void waitForPageToLoad() throws InterruptedException {
-		Thread.sleep(4000);
-	}
+	
 }
