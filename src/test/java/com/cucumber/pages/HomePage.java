@@ -11,8 +11,7 @@ public class HomePage extends BasePage{
 	public HomePage() {
 		super(driver = BaseTest.getDriver("Chrome"));
 		
-		addObject("Usermenu",By.xpath("//div[@id='userNavButton']"));
-		addObject("Logout",By.xpath("//a[normalize-space()='Logout']"));
+		
 		
 	}
 
