@@ -96,13 +96,20 @@ Then Click on the button "CalendarsAndReminders"
 Then Click on the button "ActivityReminders"
 Then Click on the button "TestReminder"
 
-@test
+
 Scenario: Developer Console
 Then Click on the button "Usermenu"
 Then Click on the button "DeveloperConsole"
 Then User waits to load page
 Then User verifies the window title "Developer Console"
 
+
+@test
+Scenario: test Logout
+Then Click on the button "Usermenu"
+Then Click on the button "Logout"
+Then User waits to load page
+Given User is on "LoginPage"
 
 
 
