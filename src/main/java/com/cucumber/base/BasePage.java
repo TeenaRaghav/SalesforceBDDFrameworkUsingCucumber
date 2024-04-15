@@ -145,4 +145,16 @@ public class BasePage {
 		}
 		driver.switchTo().window(parentWindow);
 	}
+	public void compareWindowsTitle(String expectedTitle) {
+		String parentWindow = driver.getWindowHandle();
+		String parentWindowTitle = driver.getTitle();
+		Set<String> listofhandles = driver.getWindowHandles();
+		for(String handle : listofhandles) {
+			if(!handle.equals(parentWindow)) {
+				driver.switchTo().window(handle);
+				String childWindowTitle = driver.getTitle();
+				Assert.assertEquals(childWindowTitle, expectedTitle);
+				}
+		}
+	}
 	}

@@ -38,6 +38,7 @@ public class UsermenuPage extends BasePage {
 		addObject("CalendarsAndReminders",By.id("CalendarAndReminders_font"));
 		addObject("ActivityReminders",By.xpath("//a[@id=\"Reminders_font\"]"));
 		addObject("TestReminder",By.id("testbtn"));
+		addObject("DeveloperConsole",By.xpath("//a[contains(text(),'Developer Console')]"));
 		addObject("UserNameOnProfilePage",By.id("tailBreadcrumbNode"));
 
 	}

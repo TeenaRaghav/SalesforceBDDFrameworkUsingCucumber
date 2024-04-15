@@ -122,6 +122,12 @@ public class Steps extends BaseTest {
 	public void user_accept_the_alert() {
 	    page.acceptAlert();
 	}
+	@Then("User verifies the window title {string}")
+	public void user_verifies_the_window_title(String expectedTitle) {
+		page.compareWindowsTitle(expectedTitle);
+	}
+
+
 
 
 	@After
