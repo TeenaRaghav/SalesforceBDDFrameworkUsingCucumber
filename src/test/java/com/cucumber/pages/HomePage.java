@@ -11,8 +11,25 @@ public class HomePage extends BasePage{
 	public HomePage() {
 		super(driver = BaseTest.getDriver("Chrome"));
 		
-		
-		
-	}
+		addObject("HomeTab",By.xpath("(//a[contains(text(),'Home')])[1]"));
+		addObject("DeveloperConsole",By.xpath("//a[contains(text(),'Developer Console')]"));
+		addObject("Logout",By.xpath("//a[contains(text(),'Logout')]"));
+		addObject("PostLink",By.xpath("//a[@class='publisherattach publisherattachTextPost withArrowAttached']"));
+		addObject("PostFrame",By.xpath("//iframe[@class='cke_wysiwyg_frame cke_reset']"));
+		addObject("PostTextArea",By.xpath("//body[contains(text(),'Share an update, @mention someone...')]"));
+		addObject("PostShare",By.className("bottomBarRight"));
+		addObject("Post",By.xpath("//div[@id='0D5ak000002WD4H']//span[@class='feeditemtext cxfeeditemtext']"));
+		addObject("FileLink",By.xpath("//a[@title ='File']"));
+		addObject("UploadFromComputer",By.xpath("//a[@id='chatterUploadFileAction']"));
+		addObject("ChooseFile",By.xpath("//input[@id='chatterFile']"));
+		addObject("FileShare",By.xpath("//input[@id='publishersharebutton']"));
+		addObject("File",By.className("contentFileTitle"));
+		addObject("ProfileImage",By.xpath("//div[@id='photoSection']"));
+		addObject("AddProfilePhoto",By.xpath("//a[contains(text(),'Add Photo')]"));
+		addObject("AddPhotoFrame",By.id("uploadPhotoContentId"));
+		addObject("ChoosePhoto",By.xpath( "//input[@id='j_id0:uploadFileForm:uploadInputFile']"));
+		addObject("ChoosePhotoSave",By.xpath("//input[@id='j_id0:uploadFileForm:uploadBtn']"));
+		addObject("SavePhoto",By.xpath("//input[@id='j_id0:j_id7:save']"));
+			}
 
 }

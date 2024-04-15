@@ -9,8 +9,8 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features="Features\\Usermenu.feature",
 				 glue = {"com.cucumber.steps"},
 				 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
-						 "json:target/cucumber-reports/cucumber.json"}
-//				 tags="@usermenu"
+						 "json:target/cucumber-reports/cucumber.json"},
+				 tags= "@test"
 		
 		)
 

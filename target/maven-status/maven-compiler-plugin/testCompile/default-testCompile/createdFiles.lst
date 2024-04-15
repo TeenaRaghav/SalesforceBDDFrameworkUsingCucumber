@@ -1,4 +1,5 @@
 com\cucumber\runner\Runner.class
+com\cucumber\pages\UsermenuPage.class
 com\cucumber\steps\Steps.class
 com\cucumber\pagefactory\PageFactory.class
 com\cucumber\pages\LoginPage.class

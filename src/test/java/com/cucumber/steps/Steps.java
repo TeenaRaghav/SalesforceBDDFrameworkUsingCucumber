@@ -17,6 +17,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class Steps extends BaseTest {
 	BasePage page;
@@ -66,6 +67,37 @@ public class Steps extends BaseTest {
 		page.clickOnTheLink(logicalName);
 	    
 	}
+	@When("User switches to the frame {string}")
+	public void user_switches_to_the_frame(String logicalName) {
+	   page.switchToFrame(logicalName);
+	}
+	@Then("User Switches back to default frame")
+	public void user_switches_back_to_default_frame() {
+	    page.switchToDefaultFrame();
+	}
+	@Then("Post Should be Successfully posted {string} {string}")
+	public void post_should_be_successfully_posted(String logicalName, String value) {
+	    page.validateText(logicalName, value);
+	}
+
+	@Then("User selects file to upload {string} {string}")
+	public void user_selects_file_to_upload(String logicalName, String path ) {
+	    page.uploadFile(logicalName, path);
+	}
+	@Then("File should be Successfully uploaded {string} {string}")
+	public void file_should_be_successfully_uploaded(String logicalName, String value) {
+	   page.validateText(logicalName, value);
+	}
+	@When("User hover over the element {string}")
+	public void user_hover_over_the_element(String logicalName) {
+	    page.hoverToElement(logicalName);
+	}
+	@Then("User selects photo to upload {string} {string}")
+	public void user_selects_photo_to_upload(String logicalName, String path) {
+	 page.uploadFile(logicalName, path);
+	}
+
+
 
 
 	@After
