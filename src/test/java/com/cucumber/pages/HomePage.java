@@ -30,6 +30,12 @@ public class HomePage extends BasePage{
 		addObject("ChoosePhoto",By.xpath( "//input[@id='j_id0:uploadFileForm:uploadInputFile']"));
 		addObject("ChoosePhotoSave",By.xpath("//input[@id='j_id0:uploadFileForm:uploadBtn']"));
 		addObject("SavePhoto",By.xpath("//input[@id='j_id0:j_id7:save']"));
-			}
+		addObject("AccountsTab",By.id("Account_Tab"));
+		addObject("PlusButton",By.id("AllTab_Tab"));
+		addObject("customizemytab",By.className("btnImportant"));
+		
+	
+	
+	}
 
 }

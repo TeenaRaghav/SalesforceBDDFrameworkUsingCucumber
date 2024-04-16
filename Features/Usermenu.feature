@@ -76,7 +76,7 @@ Then Click on the button "AddTab"
 Then Click on the button "Save"
 
 
-
+@mysettings
 Scenario: Edit Email in My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
@@ -88,7 +88,7 @@ Then User Click on the Radio button "YesRadioButton"
 Then Click on the button "Save"
 Then User Accept the alert
 
-
+@mysettings
 Scenario: Edit Email in My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
@@ -96,7 +96,7 @@ Then Click on the button "CalendarsAndReminders"
 Then Click on the button "ActivityReminders"
 Then Click on the button "TestReminder"
 
-
+@mysettings
 Scenario: Developer Console
 Then Click on the button "Usermenu"
 Then Click on the button "DeveloperConsole"
@@ -104,7 +104,7 @@ Then User waits to load page
 Then User verifies the window title "Developer Console"
 
 
-@test
+@mysettings
 Scenario: test Logout
 Then Click on the button "Usermenu"
 Then Click on the button "Logout"

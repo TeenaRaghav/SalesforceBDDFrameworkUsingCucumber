@@ -6,7 +6,7 @@ import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="Features\\Usermenu.feature",
+@CucumberOptions(features="Features\\Accounts.feature",
 				 glue = {"com.cucumber.steps"},
 				 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
 						 "json:target/cucumber-reports/cucumber.json"},
