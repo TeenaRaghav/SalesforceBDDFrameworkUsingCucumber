@@ -18,7 +18,9 @@ Then User selects by value "Type" "Technology Partner"
 Then User selects by value "Priority" "High"
 Then Click on the button "Save"
 
-
+@test
+Scenario: Edit Account
+Then Click on the button "AccountsTab"
 
 
 
