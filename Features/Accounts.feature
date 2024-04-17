@@ -8,7 +8,6 @@ Then User Enter into text box "Password" "pritishtina@1"
 Then Click on the button "Login"
 Then User is on "HomePage"
 
-@test
 Scenario: Edit Account
 Then Click on the button "AccountsTab"
 Given User is on "AccountsPage"
@@ -21,6 +20,7 @@ Then Click on the button "Save"
 @test
 Scenario: Edit Account
 Then Click on the button "AccountsTab"
+
 
 
 
