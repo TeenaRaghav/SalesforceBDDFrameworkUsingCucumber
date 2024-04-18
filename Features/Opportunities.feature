@@ -50,8 +50,8 @@ Then User is on "OpportunityPage"
 Then Click on the button "StuckOpportunityLink"
 Then user validate page is displayed "StuckOpportunityPageHeading" "Stuck Opportunities"
 
-@test
-Scenario: TestCase19 Stuck Opportunity link  
+
+Scenario: TestCase20 Quaterly summary 
 Then Click on the button "OpportunitiesTab"
 Then User is on "OpportunityPage"
 When User selects by visible Text "Interval" "Current and Next FQ"
