@@ -18,8 +18,9 @@ public class OpportunityPage extends BasePage{
 		addObject("CloseDateselectBtn",By.xpath("//table[@class='calDays']/tbody/tr[4]/td[3]"));
 		addObject("Stage",By.xpath("//select[@id=\"opp11\"]"));
 		addObject("Probability",By.xpath("//input[@id=\"opp12\"]"));
-		addObject("LeadSource",By.xpath("//select[@//a[contains(text(),'Opportunity Pipeline')]id=\"opp6\"]"));
-		addObject("PrimaryCampaignSource",By.xpath("//frame[@id=\"resultsFrame\"]"));
+		addObject("LeadSource",By.xpath("//select[@id=\"opp6\"]"));
+		addObject("PrimaryCampaignSource",By.id("opp17_lkwgt"));
+		addObject("PrimaryCampaignSourceFrame",By.xpath("//frame[@id=\"resultsFrame\"]"));
 		addObject("PrimaryCampaignlink",By.xpath("//a[contains(text(),'DM Campaign to Top Customers - Nov 12-23, 2001')]"));
 		addObject("Save",By.xpath("//input[@name=\"save\"]"));
 		addObject("OpportunityPipelineLink",By.xpath("//a[contains(text(),'Opportunity Pipeline')]"));

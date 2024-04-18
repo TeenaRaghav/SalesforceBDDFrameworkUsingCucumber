@@ -22,6 +22,8 @@ import io.cucumber.java.en.When;
 
 public class Steps extends BaseTest {
 	BasePage page;
+	 String parentwindow;
+	 String childwindow;
 	PropertiesFile prop = new PropertiesFile();
 	PageFactory pageFactory = new PageFactory();
 
@@ -131,6 +133,20 @@ public class Steps extends BaseTest {
 		page.scrolldown();
 	}
 
+	@Then("User gets the parent window handle")
+	public void user_gets_the_parent_window_handle() {
+	 parentwindow = page.getParentWindow();   
+	}
+	@Then("User switch to child window")
+	public void user_switch_to_child_window() {
+	    page.switchToChildWindow();
+	   }
+	@Then("User switch to parent window")
+	public void user_switch_to_parent_window() {
+	    page.switchToParentWindow(parentwindow);
+	}
+
+	
 	@After
 	public void tearDown(Scenario scenario) {
 		byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
