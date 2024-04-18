@@ -126,9 +126,10 @@ public class Steps extends BaseTest {
 	public void user_verifies_the_window_title(String expectedTitle) {
 		page.compareWindowsTitle(expectedTitle);
 	}
-
-
-
+	@Then("User scrolls down")
+	public void user_scrolls_down() {
+		page.scrolldown();
+	}
 
 	@After
 	public void tearDown(Scenario scenario) {

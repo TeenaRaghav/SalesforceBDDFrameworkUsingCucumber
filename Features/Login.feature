@@ -1,7 +1,7 @@
 Feature: Login scenario
 
 @login
-Scenario: Enter only username and click on login button
+Scenario: TestCase1 Enter only username and click on login button
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
@@ -10,7 +10,7 @@ Then Click on the button "Login"
 Then User verifies the message "Error" "Please enter your password."
 
 @login 
-Scenario: Enter valid username and valid password
+Scenario: TestCase2 Enter valid username and valid password
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
@@ -20,8 +20,8 @@ Then Click on the button "Login"
 Then User is on "HomePage"
 
 
-@login @test
-Scenario: Enter valid username and valid password and click on Remember me checkbox
+@login
+Scenario: TestCase3 Enter valid username and valid password and click on Remember me checkbox
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
@@ -36,7 +36,7 @@ Then User waits to load page
 Then User is on "LoginPage"
 
 @login
-Scenario: Test Forgot password link
+Scenario: TestCase4 Forgot password link
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then User Click On the Link "Forgot Your Password?"
@@ -47,7 +47,7 @@ Then User is on "LoginPage"
 
 
 @login
-Scenario: Enter invalid username and invalid password 
+Scenario: TestCase5 Enter invalid username and invalid password 
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"

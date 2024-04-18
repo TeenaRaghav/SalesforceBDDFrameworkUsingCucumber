@@ -10,11 +10,11 @@ Then User is on "UsermenuPage"
 
 
 @myprofile
-Scenario: Check for the usermenu
+Scenario: TestCase6 Check for the usermenu
 Then Click on the button "Usermenu"
 
 @myprofile
-Scenario: Edit Lastname in My profile page 
+Scenario: TestCase7 Edit Lastname in My profile page 
 Then Click on the button "Usermenu"
 Then Click on the button "MyProfile"
 Then Click on the button "Edit"
@@ -26,7 +26,7 @@ Then User Switches back to default frame
 Then User is on "HomePage"
 
 @myprofile
-Scenario: Post on My profile page
+Scenario: TestCase7 Post on My profile page
 Then Click on the button "Usermenu"
 Then Click on the button "MyProfile"
 And Click on the button "PostLink"
@@ -36,7 +36,7 @@ Then User Switches back to default frame
 And Click on the button "PostShare"
 
 @myprofile
-Scenario: Upload a file 
+Scenario: TestCase7 Upload a file 
 Then Click on the button "Usermenu"
 Then Click on the button "MyProfile"
 And Click on the button "FileLink"
@@ -47,7 +47,7 @@ And Click on the button "FileShare"
 Then File should be Successfully uploaded "File" "test"
 
 @myprofile
-Scenario: Upload photo
+Scenario: TestCase7 Upload photo
 Then Click on the button "Usermenu"
 Then Click on the button "MyProfile"
 Then User is on "HomePage"
@@ -62,7 +62,7 @@ Then User waits to load page
 
 
 @mysettings
-Scenario: Edit My settings
+Scenario: TestCase8 Edit My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
 Then Click on the button "PersonalInfo"
@@ -77,7 +77,7 @@ Then Click on the button "Save"
 
 
 @mysettings
-Scenario: Edit Email in My settings
+Scenario: TestCase8 Edit Email in My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
 Then Click on the button "EmailTab"
@@ -89,7 +89,7 @@ Then Click on the button "Save"
 Then User Accept the alert
 
 @mysettings
-Scenario: Edit Email in My settings
+Scenario: TestCase9 Edit Email in My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
 Then Click on the button "CalendarsAndReminders"
@@ -97,7 +97,7 @@ Then Click on the button "ActivityReminders"
 Then Click on the button "TestReminder"
 
 @mysettings
-Scenario: Developer Console
+Scenario: TestCase10 Developer Console
 Then Click on the button "Usermenu"
 Then Click on the button "DeveloperConsole"
 Then User waits to load page

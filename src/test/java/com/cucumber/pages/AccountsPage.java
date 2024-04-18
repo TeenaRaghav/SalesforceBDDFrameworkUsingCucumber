@@ -26,6 +26,7 @@ public class AccountsPage extends BasePage{
 		addObject("Value",By.xpath("//input[@id=\"fval1\"]"));
 		addObject("AvailableFields",By.xpath("//select[@id=\"colselector_select_0\"]"));
 		addObject("Add",By.xpath("//img[@class=\"rightArrowIcon\"]"));
+		addObject("SaveButtonInEditViewPage",By.xpath("//input[@value=\" Save \"]"));
 		addObject("MergeAccount",By.xpath("//a[contains(text(),'Merge Accounts')]"));
 		addObject("SearchAccount",By.xpath("//input[@id=\"srch\"]"));
 		addObject("FindAccount",By.xpath("//input[@value=\"Find Accounts\"]"));
