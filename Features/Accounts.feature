@@ -40,7 +40,6 @@ Then User selects by value "AvailableFields" "ACCOUNT.LAST_ACTIVITY"
 Then Click on the button "Add"
 Then Click on the button "SaveButtonInEditViewPage"
 
-@test
 Scenario: TestCase14 Merge Accounts
 Then Click on the button "AccountsTab"
 Given User is on "AccountsPage"
@@ -52,6 +51,24 @@ Then User Checked the checkbox "Checkbox2"
 Then Click on the button "MergeAccntNext"
 Then Click on the button "Merge"
 Then User Accept the alert
+
+@test
+Scenario: TestCase15 create account report
+Then Click on the button "AccountsTab"
+Given User is on "AccountsPage"
+Then User Click On the Link "LastActivityLink"
+Then Click on the button "DateFieldDropdown"
+Then Click on the button "CreatedDateField"
+Then Click on the button "DateInFromField"
+Then Click on the button "TodaysButtonInFromField"
+Then Click on the button "SaveBtnInCreateReportpage"
+Then User Enter into text box "ReportNameTextBox" "highPriorityreports"
+Then Click on the button "ReportUniqueNameTextBox"
+Then Click on the button "SaveAndRun"
+Then User waits to load page
+
+
+
 
 
 

@@ -39,7 +39,7 @@ public class AccountsPage extends BasePage{
 		addObject("DateFieldDropdown",By.xpath("//input[@id=\"ext-gen20\"]"));
 		addObject("CreatedDateField",By.xpath("//div[contains(text(),'Created Date')]"));
 		addObject("DateInFromField",By.xpath("//img[@id=\"ext-gen152\"]"));
-		addObject("TodaysDateInFromField",By.xpath("//span[contains(text(),'24')]"));
+		addObject("TodaysButtonInFromField",By.xpath("//span[contains(text(),'24')]"));
 		addObject("DateIntoField",By.id("ext-gen154"));
 		addObject("TodaysDateIntoField",By.xpath("(//button[contains(text(),'Today')])[2]"));
 		addObject("SaveBtnInCreateReportpage",By.xpath("//button[@id=\"ext-gen49\"]"));

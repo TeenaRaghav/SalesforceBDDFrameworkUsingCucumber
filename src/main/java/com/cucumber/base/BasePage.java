@@ -84,7 +84,7 @@ public class BasePage {
 		driver.switchTo().alert().dismiss();
 	}
 	public void waitForPageToLoad() throws InterruptedException {
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 	}
 	public void scrolldown() {
 		js = (JavascriptExecutor) driver;
