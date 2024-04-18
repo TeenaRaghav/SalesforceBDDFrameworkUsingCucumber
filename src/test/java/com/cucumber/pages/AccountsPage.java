@@ -30,7 +30,9 @@ public class AccountsPage extends BasePage{
 		addObject("MergeAccount",By.xpath("//a[contains(text(),'Merge Accounts')]"));
 		addObject("SearchAccount",By.xpath("//input[@id=\"srch\"]"));
 		addObject("FindAccount",By.xpath("//input[@value=\"Find Accounts\"]"));
-		addObject("AccountCheckbox",By.id("cid2"));
+		addObject("Checkbox1",By.xpath("//input[@id='cid0']"));
+		addObject("Checkbox2",By.xpath("//input[@id='cid1']"));
+//		addObject("AccountCheckbox",By.id("cid2"));
 		addObject("MergeAccntNext",By.xpath("//input[@title=\"Next\"]"));
 		addObject("Merge",By.xpath("//input[@value=\" Merge \"]"));
 		addObject("LastActivityLink",By.xpath("//a[contains(text(),'Accounts with last activity > 30 days')]"));

@@ -26,7 +26,6 @@ Then User Enter into text box "ViewName" "Hi Value Costumersss"
 Then User Enter into text box "ViewUniqueName" "dbshebkdrten"
 Then Click on the button "SaveButtonNewViewlink"
 
-@test
 Scenario: TestCase13 Edit Account
 Then Click on the button "AccountsTab"
 Given User is on "AccountsPage"
@@ -40,6 +39,21 @@ Then User scrolls down
 Then User selects by value "AvailableFields" "ACCOUNT.LAST_ACTIVITY"
 Then Click on the button "Add"
 Then Click on the button "SaveButtonInEditViewPage"
+
+@test
+Scenario: TestCase14 Merge Accounts
+Then Click on the button "AccountsTab"
+Given User is on "AccountsPage"
+Then User Click On the Link "MergeAccount"
+Then User Enter into text box "SearchAccount" "TSN"
+Then Click on the button "FindAccount"
+Then User Checked the checkbox "Checkbox1"
+Then User Checked the checkbox "Checkbox2"
+Then Click on the button "MergeAccntNext"
+Then Click on the button "Merge"
+Then User Accept the alert
+
+
 
 
 
