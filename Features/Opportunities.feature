@@ -16,7 +16,7 @@ Then user waits for Element "OpportunityTabdropdown"
 Then Click on the button "OpportunityTabdropdown"
 Then User waits to load page
 
-@test
+
 Scenario: TestCase17 Create new Opportunity  
 Then Click on the button "OpportunitiesTab"
 Then User is on "OpportunityPage"
@@ -36,7 +36,12 @@ Then Click on the button "PrimaryCampaignlink"
 Then User switch to parent window
 Then Click on the button "Save"
 
-
+@test
+Scenario: TestCase18 Opportunity pipeline link  
+Then Click on the button "OpportunitiesTab"
+Then User is on "OpportunityPage"
+Then Click on the button "OpportunityPipelineLink"
+Then user validate page is displayed "OpportunityPageHeading" "Opportunity Pipeline"
 
 
 

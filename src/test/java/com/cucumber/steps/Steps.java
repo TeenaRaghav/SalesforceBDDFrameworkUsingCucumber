@@ -146,7 +146,13 @@ public class Steps extends BaseTest {
 	    page.switchToParentWindow(parentwindow);
 	}
 
-	
+
+@Then("user validate page is displayed {string} {string}")
+public void user_validate_page_is_displayed(String logicalName, String expectedtext) {
+    page.validateText(logicalName, expectedtext);
+}
+
+
 	@After
 	public void tearDown(Scenario scenario) {
 		byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
