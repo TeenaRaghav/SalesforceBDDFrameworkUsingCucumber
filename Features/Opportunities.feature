@@ -36,13 +36,19 @@ Then Click on the button "PrimaryCampaignlink"
 Then User switch to parent window
 Then Click on the button "Save"
 
-@test
+
 Scenario: TestCase18 Opportunity pipeline link  
 Then Click on the button "OpportunitiesTab"
 Then User is on "OpportunityPage"
 Then Click on the button "OpportunityPipelineLink"
 Then user validate page is displayed "OpportunityPageHeading" "Opportunity Pipeline"
 
+@test
+Scenario: TestCase19 Stuck Opportunity link  
+Then Click on the button "OpportunitiesTab"
+Then User is on "OpportunityPage"
+Then Click on the button "StuckOpportunityLink"
+Then user validate page is displayed "StuckOpportunityPageHeading" "Stuck Opportunities"
 
 
 
