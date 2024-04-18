@@ -33,6 +33,8 @@ public class HomePage extends BasePage{
 		addObject("AccountsTab",By.id("Account_Tab"));
 		addObject("PlusButton",By.id("AllTab_Tab"));
 		addObject("customizemytab",By.className("btnImportant"));
+		addObject("OpportunitiesTab",By.xpath("//a[contains(text(),'Opportunities')]"));
+
 		
 	
 	
