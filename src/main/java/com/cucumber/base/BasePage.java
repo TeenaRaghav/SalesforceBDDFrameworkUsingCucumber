@@ -157,4 +157,11 @@ public class BasePage {
 				}
 		}
 	}
+	public void validateSelectedOption(String logicalName,String expectedText) {
+		WebElement element = getElement(logicalName);
+		select = new Select(element);
+		WebElement selectedText = select.getFirstSelectedOption();
+		String ActualText = selectedText.getText();
+		Assert.assertEquals(ActualText, expectedText);
+	}
 	}

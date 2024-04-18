@@ -152,6 +152,10 @@ public void user_validate_page_is_displayed(String logicalName, String expectedt
     page.validateText(logicalName, expectedtext);
 }
 
+@Then("User validate Selected Option {string} {string}")
+public void user_validate_selected_option(String logicalName, String expectedText) {
+    page.validateSelectedOption(logicalName, expectedText);
+}
 
 	@After
 	public void tearDown(Scenario scenario) {

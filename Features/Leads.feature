@@ -21,7 +21,7 @@ Then user waits for Element "View"
 Then Click on the button "View"
 Then User waits to load page
 
-@test
+
 Scenario: Testcase23 select view from dropdown
 Then Click on the button "LeadsTab"
 Given User is on "LeadsPage"
@@ -42,6 +42,21 @@ Given User is on "LeadsPage"
 Then Click on the button "Go"
 
 
+
+Scenario: Testcase24 select view from dropdown
+Then Click on the button "LeadsTab"
+Given User is on "LeadsPage"
+When User selects by visible Text "View" "Today's Leads"
+Then User validate Selected Option "TodaysLeadPageDropdown" "Today's Leads"
+
+@test
+Scenario: Testcase25 check new button on leads home
+Then Click on the button "LeadsTab"
+Given User is on "LeadsPage"
+Then Click on the button "New"
+Then User Enter into text box "LastName" "ABCD"
+Then User Enter into text box "CompanyName" "ABCD"
+Then Click on the button "Save"
 
 
 
