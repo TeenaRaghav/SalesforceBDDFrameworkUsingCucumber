@@ -35,7 +35,7 @@ public class HomePage extends BasePage{
 		addObject("customizemytab",By.className("btnImportant"));
 		addObject("OpportunitiesTab",By.xpath("//a[contains(text(),'Opportunities')]"));
 		addObject("LeadsTab",By.xpath("//a[contains(text(),'Leads')]"));
-
+		addObject("ContactsTab",By.xpath("//a[contains(text(),'Contacts')]"));
 		
 	
 	

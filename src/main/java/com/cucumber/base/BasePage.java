@@ -1,6 +1,7 @@
 package com.cucumber.base;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -52,7 +53,7 @@ public class BasePage {
 	}
 	public void waitforElement(String logicalName) {
 		WebElement element = getElement(logicalName);
-		WebDriverWait wait = new WebDriverWait(driver, 20);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 		wait.until(ExpectedConditions.visibilityOf(element));		
 	}
 	public void clickonRadioButton(String logicalName) {

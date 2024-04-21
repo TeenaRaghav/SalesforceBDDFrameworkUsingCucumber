@@ -6,6 +6,14 @@
 	<artifactId>SalesforceCucumberFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
+		<!--
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.19.1</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -16,7 +24,7 @@
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.6.0</version>
+			<version>5.7.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
@@ -45,7 +53,7 @@
 			<version>7.15.0</version>
 			<type>pom</type>
 		</dependency>
-		</dependencies>
+	</dependencies>
 	<build>
 		<plugins>
 			<plugin>
@@ -55,38 +63,38 @@
 				<configuration>
 					<includes>
 						<include>**/Runner.java</include>
-				</includes>
+					</includes>
 				</configuration>
 			</plugin>
-		<plugin>
-			<groupId>net.masterthought</groupId>
-			<artifactId>maven-cucumber-reporting</artifactId>
-			<version>5.3.0</version>
-			<executions>
-				<execution>
-				<id>execution</id>
-				<phase>verify</phase>
-				<goals>
-					<goal>generate</goal>
-				</goals>
-				<configuration>
-				<projectName>Cucumber</projectName>
-				<skip>false</skip>
-				<outputDirectory>reports/html-reports</outputDirectory>
-				<inputDirectory>target/cucumber-reports</inputDirectory>
-				<jsonFiles>
-				<param>**/*.json</param>
-				</jsonFiles>
+			<plugin>
+				<groupId>net.masterthought</groupId>
+				<artifactId>maven-cucumber-reporting</artifactId>
+				<version>5.3.0</version>
+				<executions>
+					<execution>
+						<id>execution</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<projectName>Cucumber</projectName>
+							<skip>false</skip>
+							<outputDirectory>reports/html-reports</outputDirectory>
+							<inputDirectory>target/cucumber-reports</inputDirectory>
+							<jsonFiles>
+								<param>**/*.json</param>
+							</jsonFiles>
 
-				</configuration>
-			</execution>
+						</configuration>
+					</execution>
 
 
-		</executions>
-		</plugin>
+				</executions>
+			</plugin>
 
-</plugins>
-</build>	
+		</plugins>
+	</build>
 
 
 </project>

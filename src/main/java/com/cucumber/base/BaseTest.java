@@ -25,7 +25,7 @@ public class BaseTest {
 	public static WebDriver getDriver(String browserName) {
 		if (driver==null) {
 			if (browserName.equalsIgnoreCase("Chrome")) {
-				WebDriverManager.chromedriver().setup();
+//				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 			} else if (browserName.equalsIgnoreCase("Edge")) {
 				WebDriverManager.edgedriver().setup();

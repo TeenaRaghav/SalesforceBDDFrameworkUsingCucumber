@@ -1,6 +1,6 @@
 Feature: Create an account
 Background: Launch the application and login
-Given User launch the application in "Chrome"
+Given User launch the application in "Edge"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"
@@ -52,7 +52,7 @@ Then Click on the button "MergeAccntNext"
 Then Click on the button "Merge"
 Then User Accept the alert
 
-@test
+
 Scenario: TestCase15 create account report
 Then Click on the button "AccountsTab"
 Given User is on "AccountsPage"

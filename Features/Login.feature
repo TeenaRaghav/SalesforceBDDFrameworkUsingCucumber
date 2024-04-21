@@ -2,7 +2,7 @@ Feature: Login scenario
 
 @login
 Scenario: TestCase1 Enter only username and click on login button
-Given User launch the application in "Chrome"
+Given User launch the application in "Edge"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"

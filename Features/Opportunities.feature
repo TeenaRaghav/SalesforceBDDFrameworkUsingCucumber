@@ -1,6 +1,6 @@
 Feature: Opportunities scenarios
 Background: Launch the application and login
-Given User launch the application in "Chrome"
+Given User launch the application in "Edge"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"

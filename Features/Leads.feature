@@ -1,6 +1,6 @@
 Feature: Leads scenarios
 Background: Launch the application and login
-Given User launch the application in "Chrome"
+Given User launch the application in "Edge"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"
@@ -10,6 +10,7 @@ Then User is on "HomePage"
 
 
 Scenario: Testcase21 check leads Tab link
+Then User waits to load page
 Then Click on the button "LeadsTab"
 Given User is on "LeadsPage"
 
@@ -49,7 +50,7 @@ Given User is on "LeadsPage"
 When User selects by visible Text "View" "Today's Leads"
 Then User validate Selected Option "TodaysLeadPageDropdown" "Today's Leads"
 
-@test
+
 Scenario: Testcase25 check new button on leads home
 Then Click on the button "LeadsTab"
 Given User is on "LeadsPage"
