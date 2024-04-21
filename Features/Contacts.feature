@@ -39,12 +39,17 @@ Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 Then User selects by value "FilterView" "2"
 
-@test
+
 Scenario: Testcase29 Select view in contacts
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 When User selects by visible Text "ViewDropdownInContacts" "My Contacts"
 
+@test
+Scenario: Testcase30 View recent contacts
+Then Click on the button "ContactsTab"
+Then User is on "ContactsPage"
+Then Click on the button "RecentContacts"
 
 
 
