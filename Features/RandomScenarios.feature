@@ -8,7 +8,7 @@ Then User Enter into text box "Password" "pritishtina@1"
 Then Click on the button "Login"
 Then User is on "HomePage"
 
-@test
+
 Scenario: TestCase34 Verify if the firstname and lastname of the loggedin user is displayed
 Then Click on the button "HomeTab"
 Then User validates Username on Page "UsernameLink" "https://pcs4-dev-ed.develop.my.salesforce.com/home/home.jsp" "Teena Raghav" 
