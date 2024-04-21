@@ -59,7 +59,7 @@ Then Click on the button "NewView"
 Then User Enter into text box "NewViewUniqueName" "EFGH"
 Then Click on the button "Save"
 
-@test
+
 Scenario: Testcase32 Create new contacts
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
@@ -67,3 +67,17 @@ Then Click on the button "NewView"
 Then User Enter into text box "NewViewName" "DEFG"
 Then User Enter into text box "NewViewUniqueName" "EFGH"
 Then Click on the button "CancelInContacts"
+
+@test
+Scenario: Testcase33 Create new contacts
+Then Click on the button "ContactsTab"
+Then User is on "ContactsPage"
+Then Click on the button "New"
+Then User Enter into text box "LastName" "Indian"
+And User gets the parent window handle
+Then Click on the button "LookUpIcon"
+Then User switch to child window
+When User switches to the frame "LookUpIconFrame"
+Then Click on the button "AccountNameFromLookUp"
+Then User switch to parent window
+Then Click on the button "SaveAndNew"
