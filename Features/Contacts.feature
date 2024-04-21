@@ -68,7 +68,6 @@ Then User Enter into text box "NewViewName" "DEFG"
 Then User Enter into text box "NewViewUniqueName" "EFGH"
 Then Click on the button "CancelInContacts"
 
-@test
 Scenario: Testcase33 Create new contacts
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"

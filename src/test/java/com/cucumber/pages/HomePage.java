@@ -36,6 +36,12 @@ public class HomePage extends BasePage{
 		addObject("OpportunitiesTab",By.xpath("//a[contains(text(),'Opportunities')]"));
 		addObject("LeadsTab",By.xpath("//a[contains(text(),'Leads')]"));
 		addObject("ContactsTab",By.xpath("//a[contains(text(),'Contacts')]"));
+		addObject("SelectedTabsArea",By.xpath("//option[contains(text(),'Leads')]"));
+		addObject("RemoveBtn",By.id("duel_select_0_left"));
+		addObject("SaveButton",By.xpath(" //input[@value=\" Save \"]"));
+		addObject("UsernameLink",By.xpath("//a[contains(text(),'Teena Raghav')]"));
+		addObject("FirstAndLastNameLink",By.xpath("(//a[contains(text(),\"Teena Raghav\")])[1]"));
+
 		
 	
 	
