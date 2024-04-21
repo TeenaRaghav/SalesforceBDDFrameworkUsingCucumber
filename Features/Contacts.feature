@@ -15,19 +15,30 @@ Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 Then Click on the button "New"
 Then User Enter into text box "LastName" "Adams"
-Then User Enter into text box "AccountName" "TSN & CO"
+And User gets the parent window handle
+Then Click on the button "LookUpIcon"
+Then User switch to child window
+When User switches to the frame "LookUpIconFrame"
+Then Click on the button "AccountNameFromLookUp"
+Then User switch to parent window
 Then Click on the button "Save1"
 
-@test
+
 Scenario: Testcase27 Create new view
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 Then User Click On the Link "NewView"
 Then User Enter into text box "NewViewName" "Valued Costumer"
-Then User Enter into text box "NewViewUniqueName" "High_valued_customer"
+Then user waits for Element "NewViewUniqueName"
+Then User Enter into text box "NewViewUniqueName" "High_valued_customerssssss"
 Then Click on the button "Save"
 
 
+@test
+Scenario: Testcase28 Checj recently created contact
+Then Click on the button "ContactsTab"
+Then User is on "ContactsPage"
+Then User selects by value "FilterView" "2"
 
 
 

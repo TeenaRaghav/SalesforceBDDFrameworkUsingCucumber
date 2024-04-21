@@ -14,6 +14,7 @@ public class ContactsPage extends BasePage{
 		addObject("LastName",By.xpath("//input[@id='name_lastcon2']"));
 		addObject("LookUpIcon",By.id("con4_lkwgt"));
 		addObject("LookUpIconFrame",By.xpath("//frame[@id=\"resultsFrame\"]"));
+		addObject("AccountNameFromLookUp",By.xpath("//a[contains(text(),'Global Media')]"));
 		addObject("AccountName",By.xpath("//input[@id='con4']"));
 		addObject("Save1",By.xpath("(//input[@value=\" Save \"])[1]"));
 		addObject("NewView",By.xpath("//a[contains(text(),'Create New View')]"));
