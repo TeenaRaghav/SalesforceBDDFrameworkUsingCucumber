@@ -34,11 +34,17 @@ Then User Enter into text box "NewViewUniqueName" "High_valued_customerssssss"
 Then Click on the button "Save"
 
 
-@test
-Scenario: Testcase28 Checj recently created contact
+Scenario: Testcase28 Check recently created contact
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 Then User selects by value "FilterView" "2"
+
+@test
+Scenario: Testcase29 Select view in contacts
+Then Click on the button "ContactsTab"
+Then User is on "ContactsPage"
+When User selects by visible Text "ViewDropdownInContacts" "My Contacts"
+
 
 
 

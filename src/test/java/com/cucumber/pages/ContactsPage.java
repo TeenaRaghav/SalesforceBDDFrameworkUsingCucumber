@@ -22,7 +22,8 @@ public class ContactsPage extends BasePage{
 		addObject("NewViewUniqueName",By.xpath("//input[@id='devname']"));
 		addObject("Save",By.xpath("(//input[@class='btn primary'])[1]"));
 		addObject("FilterView",By.xpath("//select[@id=\"hotlist_mode\"]"));
-		addObject("ViewDropdownInContacts",By.xpath("//select[@id=\"fcf\"]"));
+		addObject("ViewDropdownInContacts",By.xpath("//select[@id='fcf']"));
+		addObject("SelectedOption",By.xpath("//select[@id='00Bak000004s8sz_listSelect']"));
 		addObject("RecentContacts",By.xpath("//table[@class=\"list\"]/tbody/tr[2]/th/a"));
 		addObject("CancelInContacts",By.xpath("(//input[@value=\"Cancel\"])[1]"));
 		addObject("SaveAndNew",By.xpath("//input[@title='Save & New'][1]"));
