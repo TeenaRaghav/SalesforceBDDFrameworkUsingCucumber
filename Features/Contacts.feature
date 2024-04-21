@@ -45,11 +45,17 @@ Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 When User selects by visible Text "ViewDropdownInContacts" "My Contacts"
 
-@test
+
 Scenario: Testcase30 View recent contacts
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"
 Then Click on the button "RecentContacts"
 
-
+@test
+Scenario: Testcase31 Create new view in contacts
+Then Click on the button "ContactsTab"
+Then User is on "ContactsPage"
+Then Click on the button "NewView"
+Then User Enter into text box "NewViewUniqueName" "EFGH"
+Then Click on the button "Save"
 
