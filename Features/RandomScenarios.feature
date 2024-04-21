@@ -18,3 +18,15 @@ Then User waits to load page
 Then User validates names on pages "UserNameOnProfilePage" "Teena Raghav" 
 Then Click on the button "Usermenu"
 Then User compare names "Teena Raghav"
+
+@test
+Scenario: TestCase35 Verify if the firstname and lastname at various places
+Then Click on the button "HomeTab"
+Then Click on the button "FirstAndLastNameLink"
+Then User is on "UsermenuPage"
+Then Click on the button "Edit"
+When User switches to the frame "AboutFrame"
+And Click on the button "AboutTab"
+Then User Enter into text box "LastName" "Abcd"
+And Click on the button "SaveAll"
+
