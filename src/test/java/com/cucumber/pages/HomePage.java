@@ -41,10 +41,20 @@ public class HomePage extends BasePage{
 		addObject("SaveButton",By.xpath(" //input[@value=\" Save \"]"));
 		addObject("UsernameLink",By.xpath("//a[contains(text(),'Teena Raghav')]"));
 		addObject("FirstAndLastNameLink",By.xpath("(//a[contains(text(),\"Teena Raghav\")])[1]"));
-
-		
-	
-	
+		addObject("CurrentDateLink",By.xpath("//a[normalize-space()='Sunday April 21, 2024']"));
+		addObject("EightpmLink",By.id("p:f:j_id25:j_id61:28:j_id64"));
+		addObject("SubjectComboIcon",By.className("comboboxIcon"));
+		addObject("Other",By.xpath("//a[contains(text(),'Other')]"));
+		addObject("EndTimeField",By.xpath("//input[@id=\"EndDateTime_time\"]"));
+		addObject("NinePmFromDropdown",By.id("timePickerItem_42"));
+		addObject("Savebtn1",By.xpath("(//input[@value=\" Save \"])[1]"));
+		addObject("FourPmLink",By.id("p:f:j_id25:j_id61:20:j_id64"));
+		addObject("SevenPmFromDropdown",By.id("timePickerItem_38"));
+		addObject("Recurrence",By.xpath("//input[@id=\"IsRecurrence\"]"));
+		addObject("frequency",By.xpath("//input[@id=\"rectypeftw\"]"));
+		addObject("EndDate",By.xpath("//input[@id=\"RecurrenceEndDateOnly\"]"));
+		addObject("NextMonthBtn",By.xpath("//img[@title='Next Month']"));
+		addObject("SelectedDate",By.xpath("//td[normalize-space()='6']"));
 	}
 
 }
