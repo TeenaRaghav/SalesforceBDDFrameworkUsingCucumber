@@ -1,6 +1,6 @@
 Feature: Usermenu scenarios
 Background: Launch the application and login
-Given User launch the application in "Edge"
+Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"
@@ -89,23 +89,25 @@ Then Click on the button "Save"
 Then User Accept the alert
 
 @mysettings
-Scenario: TestCase9 Edit Email in My settings
+Scenario: TestCase8 Edit Email in My settings
 Then Click on the button "Usermenu"
 Then Click on the button "MySettings"
 Then Click on the button "CalendarsAndReminders"
 Then Click on the button "ActivityReminders"
 Then Click on the button "TestReminder"
 
-@mysettings
-Scenario: TestCase10 Developer Console
+@mysettings @test
+Scenario: TestCase9 Developer Console
 Then Click on the button "Usermenu"
+And User gets the parent window handle
 Then Click on the button "DeveloperConsole"
 Then User waits to load page
 Then User verifies the window title "Developer Console"
+Then User close the window
 
 
 @mysettings
-Scenario: test Logout
+Scenario: TestCase10  Logout
 Then Click on the button "Usermenu"
 Then Click on the button "Logout"
 Then User waits to load page

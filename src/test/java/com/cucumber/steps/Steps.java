@@ -175,6 +175,12 @@ public class Steps extends BaseTest {
 	public void user_compare_names(String value) {
 		page.compareNameOnPage();
 	}
+	@Then("User close the window")
+	public void user_close_the_window() {
+	   driver.close();
+	}
+
+
 
 	@After
 	public void tearDown(Scenario scenario) {
