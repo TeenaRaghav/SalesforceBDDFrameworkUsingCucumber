@@ -52,7 +52,7 @@ Then Click on the button "NinePmFromDropdown"
 Then Click on the button "Savebtn1"
 
 
-@test
+
 Scenario: TestCase38 Blocking an event in the calendar with weekly recurrence
 Then Click on the button "HomeTab"
 Then Click on the button "CurrentDateLink"
