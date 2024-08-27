@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import com.cucumber.base.BasePage;
 import com.cucumber.base.BaseTest;
-import com.cucumber.pagefactory.PageFactory;
+import com.cucumber.pageFactory.PageFactory;
 import com.cucumber.pages.LoginPage;
 import com.cucumber.utilities.PropertiesFile;
 
