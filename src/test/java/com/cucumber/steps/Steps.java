@@ -4,13 +4,16 @@ import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import com.cucumber.base.BasePage;
 import com.cucumber.base.BaseTest;
-import com.cucumber.pageFactory.PageFactory;
+import com.cucumber.pagefactory.PageFactory;
+import com.cucumber.pages.LoginPage;
 import com.cucumber.utilities.PropertiesFile;
 
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -185,5 +188,4 @@ public class Steps extends BaseTest {
 		driver.quit();
 		driver = null;
 	}
-
 }

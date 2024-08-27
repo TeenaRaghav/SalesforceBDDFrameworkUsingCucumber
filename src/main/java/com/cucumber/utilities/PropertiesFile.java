@@ -6,7 +6,11 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesFile {
+<<<<<<< HEAD
 	FileInputStream fileinput;
+=======
+FileInputStream fileinput;
+>>>>>>> 32eafd5802125400964b33985beb637141f37b96
 	public String getProperties(String Key) throws IOException {
 //	define the path of the file
 	String userdir = System.getProperty("user.dir");

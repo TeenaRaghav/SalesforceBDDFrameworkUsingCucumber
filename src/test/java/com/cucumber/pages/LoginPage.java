@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import com.cucumber.base.BasePage;
 import com.cucumber.base.BaseTest;
 
-public class LoginPage extends BasePage{
 
+public class LoginPage extends BasePage{
 	static WebDriver driver;
 	public LoginPage() {
 		super(driver=BaseTest.getDriver("Chrome"));

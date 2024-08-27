@@ -32,5 +32,4 @@ public class OpportunityPage extends BasePage {
 		addObject("RunAndReport",By.xpath("//input[@value=\"Run Report\"]"));
 	}
 
-
 }
