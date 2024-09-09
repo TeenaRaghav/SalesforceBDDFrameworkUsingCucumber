@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class PropertiesFile {
-	FileInputStream fileinput;
+	FileInputStream fileInput;
 	public String getProperties(String Key) throws IOException {
 //	define the path of the file
 	String userdir = System.getProperty("user.dir");
@@ -15,7 +15,7 @@ public class PropertiesFile {
 	
 //	load this path into file object
 	try {
-	 fileinput = new FileInputStream(filepath);
+	 fileInput = new FileInputStream(filepath);
 	}catch(FileNotFoundException e) {
 		e.printStackTrace();
 	}
@@ -23,7 +23,7 @@ public class PropertiesFile {
 	
 	Properties prop  = new Properties();
 	try {
-	prop.load(fileinput);
+	prop.load(fileInput);
 	}catch(IOException e) {
 		e.printStackTrace();
 	}
