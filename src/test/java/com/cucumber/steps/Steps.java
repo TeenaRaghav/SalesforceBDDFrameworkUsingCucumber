@@ -11,6 +11,7 @@ import com.cucumber.base.BaseTest;
 import com.cucumber.pageFactory.PageFactory;
 import com.cucumber.pages.LoginPage;
 import com.cucumber.utilities.PropertiesFile;
+import com.cucumber.utilities.ScreenshotUtility;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -183,9 +184,15 @@ public class Steps extends BaseTest {
 
 	@After
 	public void tearDown(Scenario scenario) {
+		if (scenario.isFailed()) {
+            // Take a screenshot
+            String screenshotName = scenario.getName().replaceAll(" ", "_");
+            ScreenshotUtility.takescreenshot(driver);
+
 		byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		scenario.attach(screenshot, "image/png", scenario.getName());
 		driver.quit();
 		driver = null;
+		}
 	}
 }

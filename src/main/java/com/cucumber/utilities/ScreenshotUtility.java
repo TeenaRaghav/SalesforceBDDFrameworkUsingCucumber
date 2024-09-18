@@ -11,7 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenshotUtility {
-	public void takescreenshot(WebDriver driver) {
+	public static void takescreenshot(WebDriver driver) {
 //		takescreenshot object
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);
 //		store this object in a file

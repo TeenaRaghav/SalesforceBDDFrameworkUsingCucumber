@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                13,
-                0,
-                0,
+                67,
+                7,
+                32,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 13) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 106) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -106,8 +106,8 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                0,
-                1
+                1,
+                7
             ],
             backgroundColor: [
                 "#00B000",
@@ -140,7 +140,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -230,7 +230,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Cucumber</td>
         <td>1</td>
-      <td>17 May 2024, 12:51</td>
+      <td>18 Sep 2024, 12:01</td>
     </tr>
   </tbody>
 </table>
@@ -325,20 +325,20 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-feature_3904761797.html">Usermenu scenarios</a></td>
+        <td class="tagname"><a href="report-feature_2113106798.html">Contacts scenarios</a></td>
 
-        <td      class="passed"    >13</td>
+        <td      class="passed"    >67</td>
+        <td      class="failed"    >7</td>
+        <td     class="skipped"   >32</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">13</td>
+        <td class="total">106</td>
 
-        <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="passed"    >1</td>
+        <td  class="failed"    >7</td>
+        <td class="total">8</td>
 
-        <td class="duration" data-value="15656966500">15.656</td>
+        <td class="duration" data-value="48798516800">48.798</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -346,30 +346,30 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>13</td>
+      <td>67</td>
+      <td>7</td>
+      <td>32</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>13</td>
+      <td>106</td>
 
-      <td>0</td>
       <td>1</td>
-      <td>1</td>
+      <td>7</td>
+      <td>8</td>
 
-      <td class="duration">15.656</td>
+      <td class="duration">48.798</td>
       <td>1</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
+      <td>63.21%</td>
+      <td>6.60%</td>
+      <td>30.19%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>0.00%</td>
-      <td>100.00%</td>
+      <td>12.50%</td>
+      <td>87.50%</td>
       <td></td>
       <td></td>
       <td>0.00%</td>

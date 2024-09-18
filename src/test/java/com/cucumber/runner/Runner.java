@@ -12,8 +12,8 @@ import io.cucumber.junit.CucumberOptions;
 					 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
 							 "json:target/cucumber-reports/cucumber.json"},
 					 monochrome= true,
-					 dryRun= false,
-					 tags="@Test"
+					 dryRun= false
+//					 tags="@Test"
 					 		
 			)
 	public class Runner {
@@ -28,12 +28,14 @@ import io.cucumber.junit.CucumberOptions;
 //				 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
 //						 "json:target/cucumber-reports/cucumber.json"},
 //				 monochrome= true,//it is controls whether console output is colorful and readable. When set to true, monochrome prints console output without color, 
-				 //making it more readable. When set to false, which is the default value, monochrome prints console output with color, but some characters may be unreadable.
+////				 //making it more readable. When set to false, which is the default value, monochrome prints console output with color, but some characters may be unreadable.
 //				 dryRun= false// option that compiles feature files and step definitions, and verifies that each step in the feature file has a corresponding step definition //in the step definition file. The dry run option can be set to true or false, with the default value being false.
-				 //When set to true, Cucumber will verify individual steps in the feature file and the implementation code of steps in the feature file within the step //definition file
-		
+////				 //When set to true, Cucumber will verify individual steps in the feature file and the implementation code of steps in the feature file within the step //definition file
+//		
 //		)
-
+//
 //public class Runner {
-
+//
 //}
+	
+//	for masterThought we are generating json file will be input for your generating the 
