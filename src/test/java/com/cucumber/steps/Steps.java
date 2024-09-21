@@ -20,8 +20,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Steps extends BaseTest {
+public class Steps {
+	BaseTest test;
 	BasePage page;
+	static WebDriver driver;
 	String parentwindow;
 	String childwindow;
 	PropertiesFile prop = new PropertiesFile();
@@ -29,7 +31,7 @@ public class Steps extends BaseTest {
 
 	@Given("User launch the application in {string}")
 	public void user_launch_the_application_in(String browserName) throws IOException {
-		launchapplication(browserName);
+		test.launchapplication(browserName);
 	}
 
 	@Given("User is on {string}")
@@ -181,18 +183,5 @@ public class Steps extends BaseTest {
 	}
 
 
-
-	@After
-	public void tearDown(Scenario scenario) {
-		if (scenario.isFailed()) {
-			
-			String screenshotName = scenario.getName().replaceAll(" ", "_");
-            ScreenshotUtility.takescreenshot(driver);
-
-		byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
-		scenario.attach(screenshot, "image/png", screenshotName);
-		driver.quit();
-		driver = null;
-		}
+	
 	}
-}
