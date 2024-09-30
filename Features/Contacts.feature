@@ -1,4 +1,3 @@
-
 Feature: Contacts scenarios
 Background: Launch the application and login
 Given User launch the application in "Chrome"
