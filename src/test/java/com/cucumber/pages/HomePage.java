@@ -36,8 +36,8 @@ public class HomePage extends BasePage{
 		addObject("customizemytab",By.className("btnImportant"));
 		addObject("OpportunitiesTab",By.xpath("//a[contains(text(),'Opportunities')]"));
 		addObject("LeadsTab",By.xpath("//a[contains(text(),'Leads')]"));
-	//	addObject("ContactsTab",By.xpath("//a[@title='Contacts Tab']"));
-		addObject("ContactsTab",By.xpath("//a[contains(text(),'Contacts')]"));
+		addObject("ContactsTab",By.id("Contact_Tab"));
+//		addObject("ContactsTab",By.xpath("//a[contains(text(),'Contacts')]"));
 		addObject("SelectedTabsArea",By.xpath("//option[contains(text(),'Leads')]"));
 		addObject("RemoveBtn",By.id("duel_select_0_left"));
 		addObject("SaveButton",By.xpath(" //input[@value=\" Save \"]"));

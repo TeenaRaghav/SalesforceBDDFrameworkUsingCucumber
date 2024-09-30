@@ -1,14 +1,15 @@
-Feature: Leads scenarios
+
+Feature: Contacts scenarios
 Background: Launch the application and login
 Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"
-Then User Enter into text box "Password" "pritishtina@1"
+Then User Enter into text box "Password" "PritishJai@1"
 Then Click on the button "Login"
 Then User is on "HomePage"
 
-
+@smoke
 Scenario: Testcase26 Create new contacts
 Then User waits to load page
 Then Click on the button "ContactsTab"
@@ -23,7 +24,7 @@ Then Click on the button "AccountNameFromLookUp"
 Then User switch to parent window
 Then Click on the button "Save1"
 
-
+@Test
 Scenario: Testcase27 Create new view
 Then Click on the button "ContactsTab"
 Then User is on "ContactsPage"

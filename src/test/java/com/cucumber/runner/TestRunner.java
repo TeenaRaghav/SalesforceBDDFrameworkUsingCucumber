@@ -7,16 +7,19 @@ import io.cucumber.junit.CucumberOptions;
 
 
 	@RunWith(Cucumber.class)
-	@CucumberOptions(features={"Features\\Contacts.feature"},
+	@CucumberOptions(features="Features//Contacts.feature",
 					 glue = {"com.cucumber.steps"},
-					 plugin= {"pretty", "html:target/cucumber-reports/cucumber.html",
-							 "json:target/cucumber-reports/cucumber.json"},
+					 plugin= {"pretty",
+							 "html:target/cucumber-reports/cucumber.html",
+							 "json:target/cucumber-reports/cucumber.json",
+							 "rerun:target/failedScenarios.txt"
+							 },
 					 monochrome= true,
-					 dryRun= false,
-					 tags="@Test"
+					 dryRun= false
+//					 tags="@smoke"
 					 		
 			)
-	public class Runner {
+	public class TestRunner {
 
 	}
 
