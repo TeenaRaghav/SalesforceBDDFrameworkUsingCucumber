@@ -41,10 +41,9 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1) - Failures Overview</title>
+<title>Cucumber Reports (no 1) - Feature: Login scenario</title>
 
 </head>
-
 <body>
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navigation">
@@ -55,7 +54,7 @@ $(document).ready(function() {
         <li role="presentation" ><a href="overview-features.html">Features</a></li>
         <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
         <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
-        <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
       </ul>
     </div>
   </div>
@@ -90,10 +89,67 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Failures Overview</h2>
-      <p>The following summary displays scenarios that failed.</p>
+    <h2>Feature Report</h2>
   </div>
 </div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">Login scenario</td>
+          <td      class="passed"    >25</td>
+          <td      class="failed"    >3</td>
+          <td     class="skipped"   >11</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">39</td>
+
+          <td  class="passed"    >2</td>
+          <td  class="failed"    >3</td>
+          <td class="total">5</td>
+
+          <td class="duration" data-value="52799411800">52.799</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
 
 
 <div class="container-fluid">
@@ -111,14 +167,483 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
 
-        <div class="elements">
+<div class="tags indention">
+</div>
+
+
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">Login scenario</span>
+
+
+</div>
+
+        <div class="description indention"></div>
+
+        <div class="elements inner-level">
 
 <div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_3385945820.html">Login scenario</a>
-    </div>
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">8.960</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">TestCase1 Enter only username and click on login button</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User launch the application in <span class="argument">&quot;Edge&quot;</span></span>
+
+  <span class="lead-duration duration">6.960</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User is on <span class="argument">&quot;LoginPage&quot;</span></span>
+
+  <span class="lead-duration duration">0.003</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user waits for Element <span class="argument">&quot;Username&quot;</span></span>
+
+  <span class="lead-duration duration">0.065</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User Enter into text box <span class="argument">&quot;Username&quot;</span> <span class="argument">&quot;teena@raghav.com&quot;</span></span>
+
+  <span class="lead-duration duration">0.264</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Click on the button <span class="argument">&quot;Login&quot;</span></span>
+
+  <span class="lead-duration duration">1.612</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User verifies the message <span class="argument">&quot;Error&quot;</span> <span class="argument">&quot;Please enter your password.&quot;</span></span>
+
+  <span class="lead-duration duration">0.053</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+
+
+<div class="tags indention">
+</div>
+
+
+  <span class="lead-duration duration">0.870</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">TestCase2 Enter valid username and valid password</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-4" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User launch the application in <span class="argument">&quot;Chrome&quot;</span></span>
+
+  <span class="lead-duration duration">0.137</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">User is on <span class="argument">&quot;LoginPage&quot;</span></span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">user waits for Element <span class="argument">&quot;Username&quot;</span></span>
+
+  <span class="lead-duration duration">0.035</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User Enter into text box <span class="argument">&quot;Username&quot;</span> <span class="argument">&quot;teena@raghav.com&quot;</span></span>
+
+  <span class="lead-duration duration">0.245</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User Enter into text box <span class="argument">&quot;Password&quot;</span> <span class="argument">&quot;&quot;</span></span>
+
+  <span class="lead-duration duration">0.133</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">Click on the button <span class="argument">&quot;Login&quot;</span></span>
+
+  <span class="lead-duration duration">0.313</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">User is on <span class="argument">&quot;HomePage&quot;</span></span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
 
 
 <div class="tags indention">
@@ -128,7 +653,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">2.019</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -141,14 +666,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-5" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -160,7 +685,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -395,10 +920,10 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
           <a>org.openqa.selenium.NoSuchElementException:</a>
       </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
+      <div id="msg-7" class="collapse collapsable-details  in ">
         <pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id='userNavButton']&quot;}
   (Session info: MicrosoftEdge=131.0.2903.86)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
@@ -537,10 +1062,6 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
 
 <div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_3385945820.html">Login scenario</a>
-    </div>
 
 
 <div class="tags indention">
@@ -550,7 +1071,7 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
   <span class="lead-duration duration">0.260</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -563,14 +1084,14 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
   </span>
   <div class="description indention"></div>
 
-  <div id="element-4" class="collapse collapsable-details  in ">
+  <div id="element-8" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -582,7 +1103,7 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
   </div>
 
-  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -655,10 +1176,10 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-10">
           <a>org.openqa.selenium.ElementNotInteractableException:</a>
       </div>
-      <div id="msg-6" class="collapse collapsable-details  in ">
+      <div id="msg-10" class="collapse collapsable-details  in ">
         <pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: MicrosoftEdge=131.0.2903.86)
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
@@ -821,10 +1342,6 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
 
 <div class="element">
-    <div class="indention">
-      <b>Feature:</b>
-      <a href="report-feature_3385945820.html">Login scenario</a>
-    </div>
 
 
 <div class="tags indention">
@@ -834,7 +1351,7 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
   <span class="lead-duration duration">40.689</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-11">
 
 <div class="brief failed">
   <span class="keyword indention">Scenario</span>
@@ -847,14 +1364,14 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
   </span>
   <div class="description indention"></div>
 
-  <div id="element-7" class="collapse collapsable-details  in ">
+  <div id="element-11" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-12">
 
 <div class="brief failed">
   <span class="keyword indention">Steps</span>
@@ -866,7 +1383,7 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
   </div>
 
-  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-12" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -939,10 +1456,10 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
   <div class="inner-level">
     <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-9">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-13">
           <a>org.openqa.selenium.TimeoutException:</a>
       </div>
-      <div id="msg-9" class="collapse collapsable-details  in ">
+      <div id="msg-13" class="collapse collapsable-details  in ">
         <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[EdgeDriver: MicrosoftEdge on windows (c5508530bc1d902028c0d3ed6ea223a1)] -&gt; xpath: //input[@id='username']] (tried for 40 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
@@ -1164,6 +1681,7 @@ Session ID: c5508530bc1d902028c0d3ed6ea223a1
 
         </div>
 
+      </div>
     </div>
   </div>
 </div>

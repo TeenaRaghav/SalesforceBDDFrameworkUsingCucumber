@@ -15,7 +15,7 @@ Given User launch the application in "Chrome"
 Given User is on "LoginPage"
 Then user waits for Element "Username"
 Then User Enter into text box "Username" "teena@raghav.com"
-Then User Enter into text box "Password" "PritishJai@1"
+Then User Enter into text box "Password" ""
 Then Click on the button "Login"
 Then User is on "HomePage"
 

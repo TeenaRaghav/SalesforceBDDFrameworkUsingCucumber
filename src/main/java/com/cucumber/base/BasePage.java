@@ -64,7 +64,7 @@ public class BasePage {
 		if (!element.isSelected()) {
 			element.click();
 		}
-	}
+	}	
 
 	public void validateText(String logicalName, String expectedText) {
 		WebElement element = getElement(logicalName);

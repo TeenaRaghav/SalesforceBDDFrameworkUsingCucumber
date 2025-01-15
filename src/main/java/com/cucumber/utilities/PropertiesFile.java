@@ -7,15 +7,17 @@ import java.util.Properties;
 
 public class PropertiesFile {
 	FileInputStream fileInput;
+	
 	public String getProperties(String Key) throws IOException {
 //	define the path of the file
-	String userdir = System.getProperty("user.dir");
-	String fileseperator = System.getProperty("file.separator");
-	String filepath = userdir+fileseperator+"Properties"+fileseperator+"application.properties";
-	
+//	String userdir = System.getProperty("user.dir");
+//	String fileseperator = System.getProperty("file.separator");
+//	String filepath = userdir+fileseperator+"Properties"+fileseperator+"application.properties";
+//	
 //	load this path into file object
 	try {
-	 fileInput = new FileInputStream(filepath);
+	 fileInput = new FileInputStream("C:\\Users\\teena\\eclipse-workspace\\SalesforceCucumberFramework\\Properties\\application.properties");
+//	fileInput = new FileInputStream(filepath);	 
 	}catch(FileNotFoundException e) {
 		e.printStackTrace();
 	}
@@ -28,9 +30,8 @@ public class PropertiesFile {
 		e.printStackTrace();
 	}
 //	fetch the data from the property file
-	String value = prop.getProperty(Key);
+	return prop.getProperty(Key);
 
-	return value;
 }
 
 }

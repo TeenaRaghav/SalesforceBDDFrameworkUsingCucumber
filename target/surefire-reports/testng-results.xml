@@ -2,17 +2,10 @@
 <testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
   <suite started-at="2024-09-30T10:30:19 CDT" name="Surefire suite" finished-at="2024-09-30T10:30:52 CDT" duration-ms="32808">
     <groups>
     </groups>
     <test started-at="2024-09-30T10:30:19 CDT" name="Surefire test" finished-at="2024-09-30T10:30:52 CDT" duration-ms="32808">
-=======
-  <suite started-at="2024-09-21T13:01:44 CDT" name="Surefire suite" finished-at="2024-09-21T13:02:04 CDT" duration-ms="19807">
-    <groups>
-    </groups>
-    <test started-at="2024-09-21T13:01:44 CDT" name="Surefire test" finished-at="2024-09-21T13:02:04 CDT" duration-ms="19807">
->>>>>>> 3d68096fa1e77dfd996419981f5d99bbc94da0ce
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
